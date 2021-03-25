@@ -14,13 +14,13 @@ class HornedBeasts extends React.Component {
   }
 
   vote = () => {
-    this.setState({ numberofClicks: this.state.numberofClicks + 1 });
+    this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
     this.setState({ numberOfHearts: '💚' });
   }
 
   render() {
     return (
-      <div key={this.props.keyword}>
+      <div>
 
         <h2>{this.props.title}</h2>
 
