@@ -1,15 +1,21 @@
 import React from 'react';
 
+
 class HornedBeasts extends React.Component {
-  // constructor (props){
-  //   super(props);
 
-  //   this.state = {
-  //     numberOfClicks: 0,
-  //     numberOfHearts: '',
-  //   }
-  // }
+  constructor (props){
+    super(props);
 
+    this.state = {
+      numberOfClicks: 0,
+      numberOfHearts: '',
+    }
+  }
+
+  vote = () => {
+    this.setState({numberofClicks: this.state.numberofClicks + 1});
+    this.setState({numberOfHearts:''});
+  }
 
   render (){
     return (
