@@ -2,21 +2,21 @@
 
 ### Feature 1: Display images
 Time estimate: 2hr
-Start time: 1:30PM
-Finish time: 
-Actual time required:
+Start time: 6:45PM
+Finish time: 10:30AM
+Actual time required: 3hrs
 
 ### Feature 2: Allow users to vote for their favorite beast
 Time estimate: 2hr
-Start time: 
-Finish time:
-Actual time required:
+Start time: 8:00PM
+Finish time: 11:00AM
+Actual time required:1hr
 
-### Feature #1: Display images
+### Feature 3: Bootstrap
 Time estimate: 3hr
-Start time: 
-Finish time:
-Actual time required:
+Start time: 11:00AM
+Finish time: 12:00PM
+Actual time required: 1hr
 
 # Getting Started with Create React App
 
