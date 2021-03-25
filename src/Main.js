@@ -1,7 +1,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeasts.js';
-// import beast from './img/hb1.jpg';
 import data from './data.json';
+// import beast from './img/hb1.jpg';
 
 class Main extends React.Component {
   render() {
@@ -10,9 +10,9 @@ class Main extends React.Component {
         {data.map(beast => {
           return (
             <HornedBeast
-              img_url={beast.img_url}
-              title={beast.title}
+              img_url={beast.image_url}
               description={beast.description}
+              title={beast.title}
             />
           );
         })

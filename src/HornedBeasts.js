@@ -21,7 +21,9 @@ class HornedBeasts extends React.Component {
   render() {
     return (
       <div key={this.props.keyword}>
+
         <h2>{this.props.title}</h2>
+
         <p>
           {this.state.numberOfClicks}
           {this.state.numberOfHearts}
@@ -30,7 +32,6 @@ class HornedBeasts extends React.Component {
         <img src={this.props.img_url}
           description={this.props.description}
           title={this.props.title}
-          alt={this.props.title}
         />
 
         <p>{this.props.description}</p>
