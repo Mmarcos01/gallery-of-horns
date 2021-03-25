@@ -1,4 +1,22 @@
-#Gallery of Horns
+# Gallery of Horns
+
+### Feature 1: Display images
+Time estimate: 2hr
+Start time: 1:30PM
+Finish time: 
+Actual time required:
+
+### Feature 2: Allow users to vote for their favorite beast
+Time estimate: 2hr
+Start time: 
+Finish time:
+Actual time required:
+
+### Feature #1: Display images
+Time estimate: 3hr
+Start time: 
+Finish time:
+Actual time required:
 
 # Getting Started with Create React App
 
