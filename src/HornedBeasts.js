@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import './HornedBeast.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 class HornedBeasts extends React.Component {
@@ -9,35 +11,33 @@ class HornedBeasts extends React.Component {
 
     this.state = {
       numberOfClicks: 0,
-      numberOfHearts: '',
+      ninjaCat: '',
     };
   }
 
   vote = () => {
     this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
-    this.setState({ numberOfHearts: '💚' });
+    this.setState({ ninjaCat: '🐱‍👤' });
   }
 
   render() {
     return (
-      <div>
 
-        <h2>{this.props.title}</h2>
-
-        <p>
-          {this.state.numberOfClicks}
-          {this.state.numberOfHearts}
-        </p>
-
-        <img src={this.props.img_url}
-          description={this.props.description}
-          title={this.props.title}
-        />
-
-        <p>{this.props.description}</p>
-        <Button onClick={this.vote}>Vote Here</Button>
-
-      </div>
+      <Card>
+        <Card.Img variant="top" src={this.props.image_url} />
+        <Card.Body>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>
+            {this.props.description}
+            {this.state.numberOfClicks}
+            {this.state.ninjaCat}
+          </Card.Text>
+          <Button onClick={this.vote}>Vote Here</Button>
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
     );
   }
 }
