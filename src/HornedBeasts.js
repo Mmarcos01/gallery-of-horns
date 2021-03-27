@@ -11,13 +11,13 @@ class HornedBeasts extends React.Component {
 
     this.state = {
       numberOfClicks: 0,
-      ninjaCat: '',
+      showEmoji: '',
     };
   }
 
   vote = () => {
     this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
-    this.setState({ ninjaCat: '🐱‍👤' });
+    this.setState({ showEmoji: '🦄' });
   }
 
   render() {
@@ -29,8 +29,10 @@ class HornedBeasts extends React.Component {
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
             {this.props.description}
-            {this.state.numberOfClicks}
-            {this.state.ninjaCat}
+            <p>
+              {this.state.numberOfClicks}
+              {this.state.showEmoji}
+            </p>
           </Card.Text>
           <Button onClick={this.vote}>Vote Here</Button>
         </Card.Body>

@@ -18,6 +18,12 @@ Start time: 11:00AM
 Finish time: 12:00PM
 Actual time required: 1hr
 
+### Feature 4: Display a Modal
+Time estimate: 3hr
+Start time: 12PM
+Finish time: 
+Actual time required: 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
