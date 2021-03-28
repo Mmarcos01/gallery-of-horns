@@ -9,13 +9,13 @@ class HornedBeasts extends React.Component {
 
     this.state = {
       numberOfClicks: 0,
-      showEmoji: '',
+      showEmoji: '🐱‍👤',
     };
   }
 
   vote = () => {
     this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
-    this.setState({ showEmoji: '🐱‍👤' });
+    // this.setState({ showEmoji: '🐱‍👤' });
     this.props.updateBeast(this.props.title);
     this.props.showModal();
   }
