@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
+import { Modal, Button } from 'react-bootstrap';
 
 class SelectedBeast extends React.Component {
 
@@ -8,27 +8,23 @@ class SelectedBeast extends React.Component {
       <div>
 
         <Modal
-          showModal={this.props.showModal}
-          hideModal={this.props.hideModal}
-          size="lg"
+          show={this.props.display}
+          onHide={this.props.showModal}
+          // size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-vcenter">
-              Modal heading
+              {this.props.selectedBeast.title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Centered Modal</h4>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-              consectetur ac, vestibulum at eros.
-            </p>
+            <span><img src={this.props.selectedBeast.image_url} /></span>
+            <p>{this.props.selectedBeast.description}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.hideModal}>Close</Button>
+            <Button onClick={this.props.showModal}>Close</Button>
           </Modal.Footer>
         </Modal>
       </div>

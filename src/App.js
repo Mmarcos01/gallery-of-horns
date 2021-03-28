@@ -11,26 +11,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: 'none',
+      display: false,
       data: data,
       selectedBeast: {},
     };
   }
 
   showModal = () => {
-    this.setState({ display: 'inline-block', });
+    this.setState({ display: !this.state.display });
   }
 
-  hideModal = () => {
-    this.setState({ display: 'none' });
+  updateBeast = (name) => {
+    const beastProfile = data.find(x => x.title === name);
+    this.setState({ selectedBeast: beastProfile });
   }
 
   render() {
     return (
       <div>
         <Header />
-        <Main />
-        <SelectedBeast />
+        <Main
+          data={this.state.data}
+          showModal={this.showModal}
+          updateBeast={this.updateBeast}
+        />
+        <SelectedBeast
+          display={this.state.display}
+          showModal={this.showModal}
+          selectedBeast={this.state.selectedBeast}
+        />
         <Footer />
       </div>
     );

@@ -1,6 +1,4 @@
 import React from 'react';
-import './HornedBeast.css';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
@@ -17,14 +15,16 @@ class HornedBeasts extends React.Component {
 
   vote = () => {
     this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
-    this.setState({ showEmoji: '🦄' });
+    this.setState({ showEmoji: '🐱‍👤' });
+    this.props.updateBeast(this.props.title);
+    this.props.showModal();
   }
 
   render() {
     return (
 
       <Card>
-        <Card.Img variant="top" src={this.props.image_url} />
+        <Card.Img onClick={this.vote} variant="top" src={this.props.image_url} />
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
@@ -34,7 +34,6 @@ class HornedBeasts extends React.Component {
               {this.state.showEmoji}
             </p>
           </Card.Text>
-          <Button onClick={this.vote}>Vote Here</Button>
         </Card.Body>
         {/* <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>

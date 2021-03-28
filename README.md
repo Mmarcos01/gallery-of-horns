@@ -21,8 +21,8 @@ Actual time required: 1hr
 ### Feature 4: Display a Modal
 Time estimate: 3hr
 Start time: 12PM
-Finish time: 
-Actual time required: 
+Finish time: 6PM
+Actual time required: 3hrs
 
 # Getting Started with Create React App
 
