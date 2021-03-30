@@ -4,6 +4,7 @@ import data from './data.json';
 import Header from './Header.js';
 import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
+import FilteredBeast from './FilteredBeast.js';
 import Footer from './Footer.js';
 
 class App extends React.Component {
@@ -16,6 +17,10 @@ class App extends React.Component {
       selectedBeast: {},
     };
   }
+  //function to filter beast; props go to FilteredBeast.js
+  // filterBeast = () => {
+  //   this.setState({})
+  // }
 
   showModal = () => {
     this.setState({ display: !this.state.display });
@@ -30,6 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <FilteredBeast />
         <Main
           data={this.state.data}
           showModal={this.showModal}
