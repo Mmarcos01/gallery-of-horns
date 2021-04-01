@@ -3,8 +3,8 @@ import './App.css';
 import data from './data.json';
 import Header from './Header.js';
 import Main from './Main.js';
-import SelectedBeast from './SelectedBeast.js';
 import Footer from './Footer.js';
+import SelectedBeast from './SelectedBeast.js';
 
 class App extends React.Component {
 
@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       display: false,
-      data: data,
+      allBeast: data,
       selectedBeast: {},
     };
   }
@@ -26,8 +26,8 @@ class App extends React.Component {
     this.setState({ selectedBeast: beastProfile });
   }
 
-  filterBeast = (data) => {
-    this.setState({ allBeasts: data });
+  filterBeast = (allBeast) => {
+    this.setState({allBeast:allBeast});
   }
 
   render() {
@@ -35,10 +35,12 @@ class App extends React.Component {
       <div>
         <Header />
         <Main
-          data={this.state.data}
           showModal={this.showModal}
           updateBeast={this.updateBeast}
-          filterBeast= {this.filterBeast}
+          allBeast={this.state.allBeast}
+          filterBeast={this.filterBeast}
+          originalData={data}
+          // horns={this.state.horns}
         />
         <SelectedBeast
           display={this.state.display}
