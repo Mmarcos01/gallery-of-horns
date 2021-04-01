@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import './HornedBeast.css';
 
 
 class HornedBeasts extends React.Component {
@@ -29,15 +30,12 @@ class HornedBeasts extends React.Component {
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
             {this.props.description}
-            <p>
-              {this.state.numberOfClicks}
-              {this.state.showEmoji}
-            </p>
           </Card.Text>
         </Card.Body>
-        {/* <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer> */}
+        <Card.Footer>
+          {this.state.numberOfClicks}
+          {this.state.showEmoji}
+        </Card.Footer>
       </Card>
     );
   }
