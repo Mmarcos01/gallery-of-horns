@@ -6,9 +6,13 @@ import Container from 'react-bootstrap/Container';
 class FilteredBeast extends React.Component {
 
   handleForm = event => {
-    const hornNum= +event.target.value;
-    const hornsArr = this.props.data.filter(beast => beast.horns === hornNum);
-    this.props.filterBeast(hornsArr);
+    if (event.target.value === "All") {
+      return this.props.filterBeast("all");
+    } else {
+      const hornNum = +event.target.value;
+      const hornsArr = this.props.originalData.filter(beast => beast.horns === hornNum);
+      this.props.filterBeast(hornsArr);
+    }
   }
 
   render() {
