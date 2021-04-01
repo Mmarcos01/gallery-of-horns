@@ -26,6 +26,10 @@ class App extends React.Component {
     this.setState({ selectedBeast: beastProfile });
   }
 
+  filterBeast = (data) => {
+    this.setState({ allBeasts: data });
+  }
+
   render() {
     return (
       <div>
@@ -34,6 +38,7 @@ class App extends React.Component {
           data={this.state.data}
           showModal={this.showModal}
           updateBeast={this.updateBeast}
+          filterBeast= {this.filterBeast}
         />
         <SelectedBeast
           display={this.state.display}

@@ -1,6 +1,7 @@
 import React from 'react';
 import CardColumns from 'react-bootstrap/CardColumns';
 import HornedBeast from './HornedBeasts.js';
+import FilteredBeast from './FilteredBeast.js';
 
 class Main extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Main extends React.Component {
         image_url={beast.image_url}
         description={beast.description}
         title={beast.title}
+        horns={beast.horns}
         showModal={this.props.showModal}
         updateBeast={this.props.updateBeast}
       />
@@ -19,6 +21,11 @@ class Main extends React.Component {
     //returns the beastArray output within card columns
     return (
       <main>
+        <FilteredBeast
+          filterBeast={this.props.filterBeast}
+          allBeasts={this.props.allBeasts}
+          data={this.props.originalData}
+        />
         <CardColumns>
           {beastArray}
         </CardColumns>
